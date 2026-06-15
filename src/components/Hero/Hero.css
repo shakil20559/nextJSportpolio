@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.hero_title h3{
+     font-family: cursive, sans-serif;
+}
+ .greting{
+     font-family: cursive, sans-serif;
+}
+.hero_title .name{
+     font-family: "Cinzel", serif;
+}
+.hero_title svg{
+    @apply text-2xl mx-4 text-blue-400 font-semibold
+}
+
+.hero_title span{
+    color:#d946ef;
+}
+.type_animation{
+    font-family: "Cinzel", serif;
+}

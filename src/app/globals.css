@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+    background: linear-gradient(135deg, #15013a, #110107);
+    font-family: "Outfit", sans-serif;
+    @apply tracking-wide text-blue-50;
+}
+.home_app{
+    background: linear-gradient(135deg, #04033f, #350303); 
+    @apply max-w-[1600px] w-full mx-auto ;
+    
+}
+section{
+    @apply min-h-[500px] my-5 py-5 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* .page {
+    @apply my-8  py-2 rounded-2xl;
+    min-height: 60vh;
+} */
+.btn_globalStyle {
+    background: linear-gradient(135deg, #04274e, #ac0582);
+    @apply flex justify-center items-center
+           rounded-2xl border border-fuchsia-300
+           py-2 px-6 text-2xl tracking-wider
+           transition-all duration-300 cursor-pointer 
+           text-white whitespace-nowrap shadow-lg;
+    
+    border-color: rgba(240, 171, 252, 0.4);
+    font-family: cursive, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn_globalStyle:hover {
+    background: linear-gradient(135deg, #ac0582, #04274e);
+    transform: translateY(-2px);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.social_links a {
+    @apply flex items-center justify-center
+    text-2xl xl:text-3xl
+    text-blue-100/80
+    transition-all duration-300 
+    hover:text-cyan-400
+    hover:scale-110;
 }

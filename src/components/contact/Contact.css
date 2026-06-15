@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.contact_header {
+  font-family: "Cinzel", serif;
+}
+
+.content_card,
+.address_card, 
+.form_card{
+  background: linear-gradient(
+    to bottom right,
+    rgba(31, 41, 55, 0.7),
+    rgba(17, 24, 39, 0.6)
+     );
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+.content_card:hover,
+.address_card:hover,
+.form_card:hover {
+  border-color: #c026d34d;
+  box-shadow: 0 20px 25px -5px #c026d31a;
+  transform: translateY(-3px);
+}
+
+
+
+.hero_title {
+  font-family: "Cinzel", serif;
+}
+
+.address_card .icon {
+  font-size: 1.5rem;
+  color: #e879f9;
+  flex-shrink: 0;
+}
+
+
+.input_style{
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(31, 41, 55, 0.4);
+  font-size: 1.125rem;
+  color: #dbeafe;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(139, 92, 246, 0.6);
+  border-radius: 0.75rem;
+}
+
+@media screen and (min-width:820px) {
+ .contact_hero {
+        @apply grid-cols-2 xl:grid-cols-3;
+    }
+    .form_card{
+      @apply col-span-2 w-full md:justify-self-center  
+           xl:col-span-1;
+    }
+}
+
+ 
