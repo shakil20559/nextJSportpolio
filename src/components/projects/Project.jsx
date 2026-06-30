@@ -1,7 +1,7 @@
 import React from 'react'
-import './Project.css'
 import { LuSparkles } from 'react-icons/lu'
 import HabibaPortpolio from './HabibaPort'
+import WeatherAppProject from './WeatherApp'
 const Project = () => {
   return (
     <div className='project_container'>
@@ -13,7 +13,7 @@ const Project = () => {
         w-full h-20 bg-gray-800/80 rounded-xl'>
         <span className='text-3xl text-blue-500/80 hidden sm:block '>{'</>'}</span>
         
-        <div className='header_title 
+        <div className='project_headerTitle 
             flex items-center justify-center  mx-auto 
             gap-3 sm:gap-6 xl:gap-10
             text-blue-100 whitespace-nowrap font-medium
@@ -28,8 +28,9 @@ const Project = () => {
         <span className='text-3xl text-blue-500/80 hidden sm:block '>{'</>'}</span>
       </div>
 
-      <div className='py-6 px-4 sm:px-6'>
+      <div className='flex flex-col lg:flex-row gap-4 py-6 px-4 sm:px-6'>
           <HabibaPortpolio/>
+          <WeatherAppProject/>
       </div>
         
 

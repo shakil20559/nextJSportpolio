@@ -1,16 +1,24 @@
 import Image from "next/image";
-import template from '../../../public/ummeHabiba.png'
+import habibaTemplate from '../../../public/ummeHabiba.png'
 export default function HabibaPortpolio() {
   return (
-    <div className="max-w-lg group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40">
+    <div className="max-w-md group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40">
       
       {/* Project Image */}
-      <div className="overflow-hidden">
+         <div className="relative w-full overflow-hidden bg-gray-800/50">
         <Image
-    src={template}
-    alt="Habiba Portfolio"
-    className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-  />
+          src={habibaTemplate}
+          alt="Weather App Dashboard"
+          className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          style={{
+            height: 'auto',
+            maxHeight: '280px',
+            minHeight: '200px',
+          }}
+          priority
+          quality={85}
+        />
       </div>
 
       {/* Content */}
@@ -23,10 +31,8 @@ export default function HabibaPortpolio() {
           Graphic Designer Portfolio
         </h3>
 
-        <p className="mb-5 text-gray-300">
-          A modern portfolio website designed and developed for a graphic
-          designer. Features project showcases, responsive design, smooth
-          animations, and a professional contact section.
+        <p className="mb-5 text-sm text-gray-300">
+          A modern portfolio website designed and developed for a graphic designer. Features project showcases, responsive design, smooth animations, and a professional contact section.
         </p>
 
         {/* Tech Stack */}
@@ -44,27 +50,25 @@ export default function HabibaPortpolio() {
           </span>
         </div>
 
-        {/* Buttons */}
-        <div className="flex gap-3 sm:gap-6">
-          <a
-            href="https://ummehabiba-alpha.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn_globalStyle w-1/2 ">
-            Live Demo
-          </a>
-
-          <a
-            href="https://github.com/shakil20559/ummehabiba.git"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" w-1/2 flex justify-center items-center
-           rounded-2xl border border-fuchsia-300
-           py-2 px-6 text-2xl tracking-wider hover:bg-gray-600"
-          >
-            GitHub
-          </a>
-        </div>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                 <a
+                    href="https://ummehabiba-alpha.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-1/2 text-center text-sm sm:text-base rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2.5 sm:px-6 sm:py-2.5 font-medium text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-[1.02] active:scale-[0.98]"
+                > Live Demo
+                </a>
+        
+                <a
+                    href="https://github.com/shakil20559/ummehabiba.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-1/2 flex justify-center items-center gap-2 rounded-2xl border border-fuchsia-400/30 px-4 py-2.5 sm:px-6 sm:py-2.5 text-sm sm:text-base font-medium text-fuchsia-300 transition-all duration-300 hover:bg-fuchsia-500/10 hover:border-fuchsia-400 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  
+                    GitHub
+                </a>
+                </div>
       </div>
     </div>
   );

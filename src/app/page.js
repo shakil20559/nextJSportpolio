@@ -16,6 +16,7 @@ const page = () => {
         <Hero/>
       </section>
 
+
       <section id="about">
         <About/>
       </section>

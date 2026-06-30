@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* 
+ body > * {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}  */
+ 
 body{
     background: linear-gradient(135deg, #15013a, #110107);
     font-family: "Outfit", sans-serif;
@@ -14,10 +20,6 @@ section{
     @apply min-h-[500px] my-5 py-5 
 }
 
-/* .page {
-    @apply my-8  py-2 rounded-2xl;
-    min-height: 60vh;
-} */
 .btn_globalStyle {
     background: linear-gradient(135deg, #04274e, #ac0582);
     @apply flex justify-center items-center
@@ -33,6 +35,9 @@ section{
 .btn_globalStyle:hover {
     background: linear-gradient(135deg, #ac0582, #04274e);
     transform: translateY(-2px);
+}
+.project_headerTitle{
+        font-family: "Cinzel", serif;
 }
 
 .social_links a {

@@ -30,35 +30,35 @@ const Skills = () => {
         <div className="skill_items">
             <h5>JavaScript</h5>
             <div className='progress_bar'>
-                <p>87%</p>
+                <p>85%</p>
                 <div className='progress w-[87%]'></div>
             </div>
         </div>
         <div className="skill_items">
             <h5>React Js</h5>
             <div className='progress_bar'>
-                <p>85%</p>
-                <div className='progress w-[85%]'></div>
+                <p>93%</p>
+                <div className='progress w-[93%]'></div>
             </div>
         </div>
         <div className="skill_items">
             <h5>Next Js</h5>
             <div className='progress_bar'>
-                <p>75%</p>
-                <div className='progress w-[75%]'></div>
+                <p>87%</p>
+                <div className='progress w-[87%]'></div>
             </div>
         </div>
         <div className="skill_items">
             <h5>Tailwind CSS</h5>
             <div className='progress_bar'>
-                <p>90%</p>
+                <p>97%</p>
                 <div className='progress w-[90%]'></div>
             </div>
         </div>
         <div className="skill_items">
             <h5>Git & GitHub</h5>
             <div className='progress_bar'>
-                <p>75%</p>
+                <p>80%</p>
                 <div className='progress w-[75%]'></div>
             </div>
         </div>

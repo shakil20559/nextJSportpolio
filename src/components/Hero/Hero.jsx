@@ -8,7 +8,7 @@ import Profile from './Profile'
 
 const Hero = () => {
   return (
-    <div className='flex  justify-center  gap-6 
+    <div className=' flex  justify-center  gap-6 
     flex-col lg:flex-row lg:justify-between
     mx-4 sm:mx-6 xl:mx-8 2xl:mx-14'>
    
