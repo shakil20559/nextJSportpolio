@@ -2,9 +2,10 @@
  import './Hero.css'
 import { LuSparkles } from 'react-icons/lu'
 import { BsWhatsapp } from 'react-icons/bs'
-// import HeroProfile from './HeroProfile'
-import TypeWriter from './TypeWriter'
+import TypeWriter from '../../services/TypeWriter'
 import Profile from './Profile'
+import WhatsappButton from '@/hooks/WhatsappButton'
+
 
 const Hero = () => {
   return (
@@ -32,43 +33,16 @@ const Hero = () => {
         </h1>
 
         <TypeWriter/>  
-        <p className='mt-5 mb-2 text-2xl max-w-xl text-blue-100'>
-          I build responsive, modern and user-friendly web applications with
-           <span> clean code</span>.
+        <p className='mt-6 mb-2 text-lg min-[420px]:text-2xl md:text-2xl max-w-xl text-blue-100'>
+          I build <span>complete, responsive</span> web applications from design to database with <span>clean code</span> that scales at every <span>screen size</span>.
         </p>
 
+        <WhatsappButton className='w-full '/>
         
-        <a href="https://wa.me/218931640416?text=Hi%20I%20came%20from%20your%20portfolio.%20I%20want%20to%20hire%20you"
-          target="_blank"
-          rel="noopener noreferrer"
-          className='btn_globalStyle my-8 w-full max-w-xl'>
-            Let's Talk 
-            <BsWhatsapp className='ml-3 text-green-400  !important'/>
-        </a>
-        
-      </div>
-      {/* <HeroProfile/> */}
-      <Profile/>
-
-
-
+    </div>
+        <Profile/>
     </div>
   )
 }
 
 export default Hero
-
-
-
-
-
-// home <div className=' 
-    
-//      flex-col lg:flex-row'>
-//         <div className='flex gap-5 justify-between items-center 
-//         flex-col sm:flex-row lg:flex-col 2xl:flex-row'>
-//           <Hero/>
-//           <TypingAnimation />
-//         </div>
-//       <ProfileSector/>
-//     </div>

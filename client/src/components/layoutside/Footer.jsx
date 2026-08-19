@@ -1,19 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
-// import logoLink from '../../../public/sklogo.png' 
-import SocialLinks from '@/UI/SocialLinks'
+import SocialLinks from '@/services/SocialLinks'
 
-import { BsWhatsapp } from 'react-icons/bs'
+import  WhatsappButton  from '../../hooks/WhatsappButton' 
 
 
 
 const Footer = () => {
   return (
-    <div>
-      <footer className='bg-stone-700 py-12'>
+    <div className="bg-gradient-to-b from-[#0b0813] via-[#0f0b1b] to-[#08060e] relative overflow-hidden">
+      <footer className='w-full bg-[#0b0813] text-gray-200 px-4 border-t border-purple-900/30 py-12'>
   <div className="flex gap-5 flex-col items-center justify-center
-  text-white
-   px-4 sm:px-6 lg:px-8">
+   text-gray-200 px-4 
+ sm:px-6 lg:px-8">
       <Image
              src="/sklogo.png"
             alt="SK Logo"
@@ -26,17 +25,7 @@ const Footer = () => {
       Let's create something memorable togeather.
       </p>
 
-    <a 
-      href="https://wa.me/218931640416?text=Hi%20I%20came%20from%20your%20portfolio.%20I%20want%20to%20hire%20you"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-5 
-      bg-blue-700 hover:bg-blue-900 text-white text-xl px-8 py-2 
-      rounded-lg transition-colors duration-200"
->
-  Let's Talk
-  <BsWhatsapp className="text-white text-xl" />
-</a>
+    <WhatsappButton className="w-64"/>
 
     <SocialLinks/>
 
