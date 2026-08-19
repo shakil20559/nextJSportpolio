@@ -1,11 +1,18 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import dns from 'node:dns';
 
 dotenv.config();
 
+// DNS লুকআপে IPv4 ফার্স্ট সেট করা
+dns.setDefaultResultOrder('ipv4first');
+
 // Create transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  family: 4, // Render-এ IPv6 সমস্যা এড়াতে IPv4 ফোর্স করা হয়েছে
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
