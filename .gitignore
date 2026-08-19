@@ -1,12 +1,10 @@
-```gitignore
 # Dependencies
+node_modules/
 /client/node_modules/
 /server/node_modules/
 
 # Yarn
-/client/.pnp
-/client/.pnp.*
-/client/.yarn/*
+.yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
@@ -15,10 +13,10 @@
 /server/.pnp
 /server/.pnp.*
 /server/.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+!/server/.yarn/patches
+!/server/.yarn/plugins
+!/server/.yarn/releases
+!/server/.yarn/versions
 
 # Testing
 /client/coverage/
@@ -26,6 +24,7 @@
 
 # Next.js
 /client/.next/
+/server/.next/   # Add this if server uses Next.js
 /client/out/
 
 # Production
@@ -34,11 +33,10 @@
 /server/dist/
 
 # Environment variables
-/client/.env*
-/server/.env*
+.env*
+!/client/.env.example
+!/server/.env.example
 !.env.example
-!client/.env.example
-!server/.env.example
 
 # Vercel
 /client/.vercel/
@@ -61,4 +59,4 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 /client/next-env.d.ts
-```
+/server/next-env.d.ts   # Add if server uses Next.js
