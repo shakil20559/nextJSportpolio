@@ -1,8 +1,11 @@
 const API_URL = process.env.NEXT_PUBLIC_SHAKIL_RENDER_API || 'https://nextjsportpolio.onrender.com';
 export const contactService = {
   async send(data) {
-    try {
-      const response = await fetch(`${API_URL}/contact`, {
+  try {
+    const url = `${API_URL}/contact`;
+    console.log('📡 Sending to URL:', url);
+    
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -10,6 +13,16 @@ export const contactService = {
         body: JSON.stringify(data),
       });
 
+
+async send(data) {
+  try {
+    const url = `${API_URL}/contact`;
+    console.log('📡 Sending to URL:', url);
+    
+    const response = await fetch(url, {
+      // ... rest of your code
+    });
+      
       // Verify whether the response body is JSON to prevent unexpected token errors
       const contentType = response.headers.get('content-type');
       let result;
