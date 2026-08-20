@@ -3,17 +3,19 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import contactRoutes from './src/routes/contactRoutes.js';
 
+// Load environment variables
 dotenv.config();
+
+console.log('🚀 Starting server...');
+console.log('📂 Current directory:', process.cwd());
 
 const app = express();
 const PORT = process.env.PORT || 10000;
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.CLIENT_URL || ['http://localhost:3000', 'https://your-frontend-url.com'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: process.env.CLIENT_URL || '*',
+  credentials: true
 }));
 
 app.use(express.json());
@@ -25,36 +27,51 @@ app.use((req, res, next) => {
   next();
 });
 
-// Health check (at root)
+// Health check at root
 app.get('/', (req, res) => {
-  res.status(200).json({ success: true, message: 'Server is running!' });
+  res.status(200).json({ 
+    success: true, 
+    message: 'Server is running!',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Health check at /api/health
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString() 
+  });
 });
 
 // API routes
 app.use('/api', contactRoutes);
 
-// 404 handler
-app.use((req, res) => {
-  console.log(`❌ Route not found: ${req.method} ${req.url}`);
+// 404 handler for API routes
+app.use('/api/*', (req, res) => {
+  console.log(`❌ API route not found: ${req.method} ${req.url}`);
   res.status(404).json({
     success: false,
-    message: 'Route not found'
+    message: `API route not found: ${req.url}`
   });
 });
 
-// Error handler
+// Global error handler
 app.use((err, req, res, next) => {
-  console.error('Server error:', err);
+  console.error('❌ Server error:', err);
   res.status(500).json({
     success: false,
-    message: 'Internal server error'
+    message: err.message || 'Internal server error'
   });
 });
 
+// Start server
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`✅ Server successfully started!`);
+  console.log(`🚀 Running on port: ${PORT}`);
   console.log(`📧 Sending emails from: ${process.env.EMAIL_USER}`);
   console.log(`📬 Receiving emails at: ${process.env.EMAIL_TO}`);
+  console.log(`🔗 Health check: http://localhost:${PORT}/api/health`);
 });
 
 export default app;
