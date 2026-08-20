@@ -6,7 +6,7 @@ import contactRoutes from './src/routes/contactRoutes.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Render পোর্টের জন্য এটি আবশ্যক
+const PORT = process.env.PORT || 5000; 
 
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Health Check Route (Render-এর স্ট্যাটাস চেক করার জন্য ভালো)
+
 app.get('/', (req, res) => {
   res.status(200).json({ success: true, message: 'Server is running!' });
 });

@@ -1,6 +1,5 @@
 import { sendEmail } from '../models/email.js';
 
-// HTML এস্কেপ করার একটি সাধারণ হেলপার ফাংশন
 const escapeHtml = (text = '') => {
   return String(text)
     .replace(/&/g, '&amp;')
@@ -14,11 +13,9 @@ export const handleContact = async (req, res) => {
   try {
     const { username, email, message } = req.cleanData;
 
-    // সিকিউরিটির জন্য ইনপুট ক্লিন করা
     const safeUsername = escapeHtml(username);
     const safeMessage = escapeHtml(message);
 
-    // ১. এডমিন নোটিফিকেশন ইমেইল
     const adminEmailPromise = sendEmail({
       to: process.env.EMAIL_TO,
       subject: `📩 New Contact: ${username}`,
@@ -40,7 +37,8 @@ export const handleContact = async (req, res) => {
       `
     });
 
-    // ২. ইউজার অটোরিপ্লাই ইমেইল
+    
+
     const userEmailPromise = sendEmail({
       to: email,
       subject: '🙏 Thank you for contacting me!',
@@ -61,7 +59,7 @@ export const handleContact = async (req, res) => {
       `
     });
 
-    // দুটো ইমেইল একসাথে সমান্তরালে পাঠানো
+    
     await Promise.all([adminEmailPromise, userEmailPromise]);
 
     return res.json({

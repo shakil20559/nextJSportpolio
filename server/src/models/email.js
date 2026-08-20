@@ -4,7 +4,7 @@ import dns from 'node:dns';
 
 dotenv.config();
 
-// DNS লুকআপে IPv4 ফার্স্ট সেট করা
+
 dns.setDefaultResultOrder('ipv4first');
 
 // Create transporter
@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
   secure: true,
-  family: 4, // Render-এ IPv6 সমস্যা এড়াতে IPv4 ফোর্স করা হয়েছে
+  family: 4, 
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
