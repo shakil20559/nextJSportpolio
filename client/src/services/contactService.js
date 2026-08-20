@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_SHAKIL_RENDER_API || 'https://nextjsportpolio.onrender.com/api' || 'http://localhost:10000/api';
+const API_URL = process.env.NEXT_PUBLIC_SHAKIL_RENDER_API || 'https://nextjsportpolio.onrender.com/api';
 
 export const contactService = {
   async send(data) {
@@ -11,21 +11,19 @@ export const contactService = {
         body: JSON.stringify(data),
       });
 
-      // Verify whether the response body is JSON to prevent "Unexpected token '<'" parsing errors
+      // Verify whether the response body is JSON to prevent unexpected token errors
       const contentType = response.headers.get('content-type');
       let result;
 
       if (contentType && contentType.includes('application/json')) {
         result = await response.json();
       } else {
-        // Handle HTML or plain text responses (e.g., Express or Render 5xx/4xx HTML pages)
         const rawText = await response.text();
         console.error('Server returned a non-JSON response:', rawText);
         throw new Error(`Server returned status ${response.status}. Please check your backend logs.`);
       }
 
       if (!response.ok) {
-        // If validation errors exist
         if (result && result.errors) {
           throw { type: 'validation', errors: result.errors };
         }
