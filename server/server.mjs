@@ -44,16 +44,25 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// API routes
+// API routes - FIXED: Remove the wildcard syntax
 app.use('/api', contactRoutes);
 
-// 404 handler for API routes
-app.use('/api/*', (req, res) => {
-  console.log(`❌ API route not found: ${req.method} ${req.url}`);
-  res.status(404).json({
-    success: false,
-    message: `API route not found: ${req.url}`
-  });
+// 404 handler for API routes - FIXED: Use proper Express 5 syntax
+app.use((req, res) => {
+  // Only handle API routes
+  if (req.path.startsWith('/api')) {
+    console.log(`❌ API route not found: ${req.method} ${req.url}`);
+    res.status(404).json({
+      success: false,
+      message: `API route not found: ${req.url}`
+    });
+  } else {
+    // For non-API routes, return 404
+    res.status(404).json({
+      success: false,
+      message: 'Route not found'
+    });
+  }
 });
 
 // Global error handler
