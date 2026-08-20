@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_SHAKIL_RENDER_API || 'http://localhost:5000/api';
+const API_URL = process.env.NEXT_PUBLIC_SHAKIL_RENDER_API || 'https://nextjsportpolio.onrender.com/api' || 'http://localhost:10000/api';
 
 export const contactService = {
   async send(data) {
