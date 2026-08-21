@@ -1,4 +1,5 @@
-import { sendEmail } from '../models/email.js';
+// import { sendEmail } from '../models/email.js';
+import { resendEmail } from "../models/resendAPI.js";
 
 const escapeHtml = (text = '') => {
   return String(text)
@@ -16,7 +17,7 @@ export const handleContact = async (req, res) => {
     const safeUsername = escapeHtml(username);
     const safeMessage = escapeHtml(message);
 
-    const adminEmailPromise = sendEmail({
+    const adminEmailPromise = resendEmail({
       to: process.env.EMAIL_TO,
       subject: `📩 New Contact: ${username}`,
       text: `Name: ${username}\nEmail: ${email}\nMessage: ${message}\nSent at: ${new Date().toLocaleString()}`,
@@ -39,7 +40,7 @@ export const handleContact = async (req, res) => {
 
     
 
-    const userEmailPromise = sendEmail({
+    const userEmailPromise = resendEmail({
       to: email,
       subject: '🙏 Thank you for contacting me!',
       text: `Dear ${username},\n\nThank you for reaching out. I have received your message and will get back to you within 24-48 hours.\n\nYour message:\n${message}\n\nBest regards,\nShakil`,
