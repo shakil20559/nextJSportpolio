@@ -1,4 +1,3 @@
-// import { sendEmail } from '../models/email.js';
 import { resendEmail } from "../models/resendAPI.js";
 
 const escapeHtml = (text = '') => {
@@ -17,7 +16,8 @@ export const handleContact = async (req, res) => {
     const safeUsername = escapeHtml(username);
     const safeMessage = escapeHtml(message);
 
-    const adminEmailPromise = resendEmail({
+    // শুধুমাত্র আপনার ইমেইলে নোটিফিকেশন মেসেজ যাবে
+    await resendEmail({
       to: process.env.EMAIL_TO,
       subject: `📩 New Contact: ${username}`,
       text: `Name: ${username}\nEmail: ${email}\nMessage: ${message}\nSent at: ${new Date().toLocaleString()}`,
@@ -38,34 +38,9 @@ export const handleContact = async (req, res) => {
       `
     });
 
-    
-
-    const userEmailPromise = resendEmail({
-      to: email,
-      subject: '🙏 Thank you for contacting me!',
-      text: `Dear ${username},\n\nThank you for reaching out. I have received your message and will get back to you within 24-48 hours.\n\nYour message:\n${message}\n\nBest regards,\nShakil`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px;">
-          <h2 style="color: #8b5cf6;">Thank You for Reaching Out!</h2>
-          <p>Dear ${safeUsername},</p>
-          <p>I've received your message and will get back to you within 24-48 hours.</p>
-          <div style="background: #f3f4f6; padding: 15px; border-radius: 5px; margin: 20px 0; white-space: pre-wrap;">
-            <h4 style="margin-top: 0;">Your Message:</h4>
-            <p>${safeMessage}</p>
-          </div>
-          <hr>
-          <p style="color: #6b7280;">Best regards,<br><strong>Shakil</strong></p>
-          <p style="color: #9ca3af; font-size: 12px;">This is an automated response.</p>
-        </div>
-      `
-    });
-
-    
-    await Promise.all([adminEmailPromise, userEmailPromise]);
-
     return res.json({
       success: true,
-      message: 'Message sent successfully! We\'ll get back to you soon.'
+      message: "Message sent successfully! We'll get back to you soon."
     });
 
   } catch (error) {
