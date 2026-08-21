@@ -66,7 +66,7 @@ export default function MySkillsCard() {
   ];
 
   return (
-    <div className="bg-slate-950 text-white py-6 px-1.5  sm:px-6 rounded-2xl border border-indigo-950/80 shadow-xl">
+    <div className="bg-slate-950 text-white py-6 px-2  sm:px-6 rounded-2xl border border-indigo-950/80 shadow-xl">
       {/* Header Icon & Title */}
         <div className="flex gap-4 items-center ml-1">
             <div className="w-12 h-12 rounded-xl bg-indigo-950/60 flex items-center justify-center text-purple-400 mb-4 border border-purple-900/30">
