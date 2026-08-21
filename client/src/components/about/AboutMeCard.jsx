@@ -11,15 +11,17 @@ import {
 export default function AboutMeCard() {
   return (
     
-  <div className="bg-[#0b071e] text-white p-2 sm:p-6 md:p-10 lg:p-6 rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full max-w-full md:max-w-none">
+  <div className="bg-[#0b071e] text-white 
+  px-3 sm:px-6 md:px-10 lg:px-4 py-8 
+  rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full max-w-full md:max-w-none">
     <div className="w-full max-w-2xl md:max-w-3xl">
       <div>
         {/* Header Icon & Title */}
-        <div className="flex gap-4 items-center -ml-1">
+        <div className="flex gap-4 items-center ml-2">
           <div className="w-12 h-12 rounded-xl bg-[#1d1145] flex items-center justify-center text-purple-400 mb-4 border border-purple-900/30">
             <FaUser size={24} />
           </div>
-          <h2 className="text-2xl sm:3xl font-bold mb-2">About Me</h2>
+          <h2 className="text-2xl sm:3xl font-bold mb-2 ">About Me</h2>
         </div>
         
 

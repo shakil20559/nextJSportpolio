@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  FaCode, FaHtml5, FaCss3Alt, FaJs, FaReact,FaNodeJs, FaGitAlt,
+  FaCode, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,
   FaDocker,
 } from "react-icons/fa";
 import {
@@ -10,26 +10,27 @@ import { VscCode } from "react-icons/vsc";
 import { TbApi, TbLock } from "react-icons/tb";
 
 const SkillCategory = ({ title, icon: Icon, skills }) => (
-  <div className="bg-[#120a2e] p-5 rounded-xl border border-[#23174d] h-full flex flex-col justify-between">
+  <div className="bg-slate-900/90 py-5 px-2.5  sm:px-5 rounded-xl 
+  border border-indigo-950 h-full flex flex-col justify-between">
     <div>
-      <div className="flex items-center gap-2 mb-5 text-purple-400 font-semibold border-b border-[#23174d] pb-3">
+      <div className="flex items-center gap-2 mb-5 text-purple-400 font-semibold border-b border-indigo-950 pb-3">
         <Icon size={18} />
         <span className="text-sm tracking-wide">{title}</span>
       </div>
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div key={index} className="flex items-center justify-between gap-3">
-            <div className="flex items-center gap-2.5 w-32 shrink-0">
+            <div className="flex items-center gap-2.5 w-28 sm:w-32 shrink-0">
               <skill.icon className={`${skill.color || "text-purple-400"} text-lg shrink-0`} />
               <span className="text-xs font-medium text-gray-200 truncate">{skill.name}</span>
             </div>
-            <div className="flex-1 bg-[#150d38] rounded-full h-2 overflow-hidden border border-[#25165c]">
+            <div className="flex-1 bg-slate-700 rounded-full h-2 overflow-hidden border border-indigo-900/60">
               <div
                 className="bg-gradient-to-r from-purple-600 to-pink-500 h-full rounded-full transition-all duration-500"
                 style={{ width: `${skill.level}%` }}
               ></div>
             </div>
-            <span className="text-xs font-semibold text-gray-300 w-8 text-right shrink-0">
+            <span className="text-xs font-semibold text-gray-300 w-6 sm:w-6 text-right shrink-0">
               {skill.level}%
             </span>
           </div>
@@ -65,18 +66,15 @@ export default function MySkillsCard() {
   ];
 
   return (
-    <div className="bg-[#0b071e] text-white p-6 rounded-2xl border border-[#1f1640] shadow-xl">
+    <div className="bg-slate-950 text-white py-6 px-1.5  sm:px-6 rounded-2xl border border-indigo-950/80 shadow-xl">
       {/* Header Icon & Title */}
-      <div className="flex gap-4 items-center -ml-1">
-                <div className="w-12 h-12 rounded-xl bg-[#1d1145] flex items-center justify-center text-purple-400 mb-4 border border-purple-900/30">
-                  <FaCode size={24} />
-                </div>
-                <h2 className="text-2xl sm:3xl font-bold mb-2">My Skills</h2>
-              </div>
+        <div className="flex gap-4 items-center ml-1">
+            <div className="w-12 h-12 rounded-xl bg-indigo-950/60 flex items-center justify-center text-purple-400 mb-4 border border-purple-900/30">
+              <FaCode size={24} />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">My Skills</h2>
+        </div>
 
-
-      {/* Grid Layout for Categories */}
-      {/* <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6"> */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-md md:max-w-none mx-auto">
         <SkillCategory title="Frontend Development" icon={FaCode} skills={frontendSkills} />
         <SkillCategory title="Backend Development" icon={FaNodeJs} skills={backendSkills} />
