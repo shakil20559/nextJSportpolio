@@ -16,10 +16,6 @@ body{
     @apply max-w-[1600px] w-full mx-auto ;
     
 }
-section{
-    @apply min-h-[500px] my-5 py-5 
-}
-
 .btn_globalStyle {
     background: linear-gradient(135deg, #04274e, #ac0582);
     @apply flex justify-center items-center

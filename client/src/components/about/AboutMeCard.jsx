@@ -12,7 +12,7 @@ export default function AboutMeCard() {
   return (
     
   <div className="bg-[#0b071e] text-white 
-  px-3 sm:px-6 md:px-10 lg:px-4 py-8 
+  px-3 sm:px-6 md:px-10 lg:px-4 py-12 
   rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full max-w-full md:max-w-none">
     <div className="w-full max-w-2xl md:max-w-3xl">
       <div>

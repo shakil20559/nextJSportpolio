@@ -9,7 +9,7 @@ const Project = () => {
         {/* project header */}
       <div 
         className='flex items-center justify-between
-        my-4 px-4 sm:px-6 lg:px-8 xl:px-10 
+        mb-12 px-4 sm:px-6 lg:px-8 xl:px-10 
         w-full h-20 bg-gray-800/80 rounded-xl'>
         <span className='text-3xl text-blue-500/80 hidden sm:block '>{'</>'}</span>
         

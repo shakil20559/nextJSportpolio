@@ -5,16 +5,16 @@ import WhatIDoCard from "./WhatIDoCard";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#050212] mt-6
-     py-12 px-2 min-[500px]:px-4 sm:px-4 lg:px-5">
+    <div className="min-h-screen 
+      px-2 min-[500px]:px-4 sm:px-4 lg:px-5">
       <div className="  mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-stretch mb-6">
         <AboutMeCard />
         <WhatIDoCard />
       </div>
-      <div className=" mx-auto gap-6 items-stretch">
+      <div className=" mx-auto mt-12 gap-6 items-stretch">
         <MySkillsCard />
       </div>
       
     </div>
   );
-}
+} 

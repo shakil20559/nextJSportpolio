@@ -5,9 +5,7 @@ import {
   FaServer,
   FaDatabase,
   FaShieldAlt,
-  FaRocket,
   FaCloudUploadAlt,
-  FaArrowRight,
 } from "react-icons/fa";
 
 const ServiceItem = ({ icon: Icon, title, description }) => (
@@ -21,7 +19,7 @@ const ServiceItem = ({ icon: Icon, title, description }) => (
         <p className="text-sm sm:text-md text-gray-400 mt-1 leading-relaxed">{description}</p>
       </div>
     </div>
-    {/* <FaArrowRight className="text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition duration-200 flex-shrink-0" size={14} /> */}
+  
   </div>
 );
 
@@ -56,9 +54,8 @@ export default function WhatIDoCard() {
   ];
 
   return (
-    // <div className="bg-[#0b071e] text-white p-6 rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full">
-    //   <div>
-    <div className="bg-[#0b071e] text-white p-2 min-[500px]:px-5 sm:p-6 md:px-10 lg:px-6 rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full max-w-full md:max-w-none">
+   
+    <div className="bg-[#0b071e] text-white py-12  min-[500px]:px-5  md:px-10 lg:px-6 rounded-2xl border border-[#1f1640] shadow-xl flex flex-col justify-between h-full max-w-full md:max-w-none">
       <div className="w-full max-w-2xl md:max-w-3xl">  
 
          <div className="flex gap-4 items-center">

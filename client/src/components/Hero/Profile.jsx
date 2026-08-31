@@ -6,7 +6,7 @@ import { LuSparkles } from 'react-icons/lu'
 
 const Profile = () => {
   return (
-    <div className="  relative flex items-center justify-center">
+    <div className="  relative flex items-center justify-center mt-12">
 
   {/* Background Glow */}
   <div
@@ -39,7 +39,7 @@ const Profile = () => {
   {/* Bottom Curve */}
   <div
     className="
-      absolute -bottom-2 sm:-bottom-2 lg:bottom-14 z-20
+      absolute -bottom-2 sm:-bottom-2 lg:bottom-0 z-20
       w-[250px] sm:w-[350px] md:w-[450px] xl:w-[500px] 
           h-[180px] sm:h-[200px] md:h-[220px]
       border-b-[4px] border-pink-500
@@ -50,7 +50,7 @@ const Profile = () => {
   <div
     className="
       absolute
-      -bottom-5 md:-bottom-3 lg:bottom-10
+      -bottom-5 md:-bottom-3 lg:-bottom-2
        left-1/3
       -translate-x-1/2
       text-pink-300

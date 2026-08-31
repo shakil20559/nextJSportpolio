@@ -18,7 +18,7 @@ const ContactForm = () => {
   return (
     <form 
       onSubmit={handleSubmit} 
-      className=" w-full py-6 sm:py-8 px-2 sm:px-8 rounded-3xl border border-violet-500/20 bg-gray-800/20 flex flex-col justify-between h-full"
+      className=" w-full py-8 px-2 sm:px-8 rounded-3xl border border-violet-500/20 bg-gray-800/20 flex flex-col justify-between h-full"
     >
       <div className="flex flex-col gap-5">
         <div className="w-full">

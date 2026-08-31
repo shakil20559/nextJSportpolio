@@ -33,7 +33,7 @@ function Navbar({ isOpen, setIsOpen }) {
         smooth
         spy
         duration={400}
-        offset={-80}
+        offset={-20}
         onClick={handleNavClick}
       >
         About
@@ -46,7 +46,7 @@ function Navbar({ isOpen, setIsOpen }) {
         smooth
         spy
         duration={400}
-        offset={-80}
+        offset={-40}
         onClick={handleNavClick}
       >
         Projects
@@ -59,7 +59,7 @@ function Navbar({ isOpen, setIsOpen }) {
         smooth
         spy
         duration={400}
-        offset={-80}
+        offset={-40}
         onClick={handleNavClick}
       >
         Contact
