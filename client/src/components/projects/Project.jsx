@@ -2,6 +2,7 @@ import React from 'react'
 import { LuSparkles } from 'react-icons/lu'
 import HabibaPortpolio from './HabibaPort'
 import WeatherAppProject from './WeatherApp'
+import SingleProductCOD from './ProjectCod'
 const Project = () => {
   return (
     <div className='bg-[#090613 px-4'>
@@ -29,8 +30,10 @@ const Project = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl mx-auto mt-8 px-1">
+          <SingleProductCOD/>
           <HabibaPortpolio/>
           <WeatherAppProject/>
+         
       </div>
         
 

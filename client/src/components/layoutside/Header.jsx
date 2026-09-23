@@ -14,15 +14,15 @@ const Header = () => {
     <header
       className=" header_con sticky top-0 z-50
       flex items-center justify-between
-      px-5 md:px-10 py-3
+      px-5 md:px-10 py-1.5
       backdrop-blur-md
       border-b border-white/10
       " >
       <Image
         src="/sklogo.png"
         alt="Logo"
-        width={120}
-        height={60}
+        width={80}
+        height={40}
         priority 
         // className="border border-amber-50"
       />
