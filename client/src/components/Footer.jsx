@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import SocialLinks from '@/services/SocialLinks'
 
-import  WhatsappButton  from '../../hooks/WhatsappButton' 
+import  WhatsappButton  from '../hooks/WhatsappButton' 
 
 
 

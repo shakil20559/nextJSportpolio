@@ -37,7 +37,7 @@ const Header = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="
         md:hidden
-        text-3xl
+        text-2xl
         text-white
         hover:text-cyan-400
         transition-colors

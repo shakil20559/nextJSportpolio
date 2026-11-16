@@ -46,7 +46,7 @@ export default function AboutMeCard() {
             </div>
             <div>
               <p className="text-base text-gray-400 ">Experience</p>
-              <p className="text-lg  font-medium">1+ Years</p>
+              <p className="text-lg  font-medium">2+ Years  </p>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function AboutMeCard() {
 
 
         <a
-          href="/shakilKhanresume.pdf"
+          href="/shakilResume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full flex justify-center items-center gap-1.5 

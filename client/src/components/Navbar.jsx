@@ -1,8 +1,6 @@
-"use client";
 
 import { Link } from "react-scroll";
-import "./Layout.css";
-
+import "./Navbar.css";
 function Navbar({ isOpen, setIsOpen }) {
   const handleNavClick = () => {
     setIsOpen(false);
@@ -33,7 +31,7 @@ function Navbar({ isOpen, setIsOpen }) {
         smooth
         spy
         duration={400}
-        offset={-20}
+        offset={-60}
         onClick={handleNavClick}
       >
         About
@@ -46,7 +44,7 @@ function Navbar({ isOpen, setIsOpen }) {
         smooth
         spy
         duration={400}
-        offset={-40}
+        offset={-80}
         onClick={handleNavClick}
       >
         Projects

@@ -61,16 +61,16 @@ const Hero = () => {
             transition: { duration: 0.2 }
           }}
           className='flex justify-center items-center w-full max-w-md
-          text-xl lg:text-2xl text-blue-100 tracking-wider
+          text-lg md:text-xl text-blue-100 tracking-wider
           border rounded-2xl border-fuchsia-300/40
-          py-2 px-2'
+          py-1.5 px-2'
         >
-          FRONTEND DEVELOPER 
+          MERN STACK DEVELOPER 
           <motion.span
             animate={floatAnimation}
           >
             <LuSparkles 
-              className='text-2xl ml-3 text-blue-400 font-semibold sm:ml-5'
+              className='text-xl ml-3 text-blue-400 font-semibold sm:ml-5'
             />
           </motion.span>
         </motion.h3>
@@ -78,7 +78,7 @@ const Hero = () => {
         {/* Greeting - Slide from left */}
         <motion.h2 
           variants={itemVariants}
-          className="greting mt-5 mx-2 text-3xl text-fuchsia-300 font-normal italic"
+          className="greting mt-4 mx-2 text-xl text-fuchsia-300 font-normal italic"
         >
           Hi I`m
         </motion.h2>
@@ -86,7 +86,7 @@ const Hero = () => {
         {/* Name - Letter by letter animation */}
         <motion.h1 
           variants={itemVariants}
-          className="name text-7xl text-blue-100 my-5 font-medium"
+          className="name text-6xl text-blue-100 my-5 font-medium"
         >
           <motion.span
             whileHover={{ 
@@ -122,7 +122,7 @@ const Hero = () => {
         {/* Description - Fade up */}
         <motion.p 
           variants={itemVariants}
-          className='my-8 text-lg min-[420px]:text-2xl md:text-2xl max-w-xl text-blue-100'
+          className='my-8 text-lg sm:text-xl max-w-xl text-blue-100'
         >
           I build <span>complete, responsive</span> web applications from design to database with <span>clean code</span> that scales at every <span>screen size</span>.
         </motion.p>

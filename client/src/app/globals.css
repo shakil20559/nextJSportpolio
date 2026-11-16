@@ -7,7 +7,7 @@
 }  */
  
 body{
-    background: linear-gradient(135deg, #15013a, #110107);
+    background: linear-gradient(135deg, #290e5c, #110107);
     font-family: "Outfit", sans-serif;
     @apply tracking-wide text-blue-50;
 }
